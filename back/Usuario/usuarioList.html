@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+</head>
+<body>
+    <h2>Lista de Usuarios</h2>
+    <button onclick="window.createModal.showModal()">+ Crear Nuevo Usuario</button>
+
+    <!-- Ventana modal para crear nuevo  producto -->
+    <dialog id="createModal">
+        <button onclick="window.createModal.close()">X</button>
+        <form action="./php/createUsuario.php" method="post">
+            <label for="user">Usuario:</label>
+            <input type="text" name="user" id="user" autofocus>
+            <br>
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email">
+            <br>
+            <label for="psswd">Contaseña:</label>
+            <input type="number" name="psswd" id="psswd">
+            <br>
+            <!-- añadir check booleano para saber si es admin o no -->
+            <input type="submit" value="Añadir">
+            <input type="reset" value="Limpiar">
+        </form>
+    </dialog>
+
+    <div id="usuariosList" style="border: 1px solid gray;"></div>
+
+    <!-- Ventana modal para editar un producto -->
+    <dialog id="updateModal">
+        <button onclick="window.updateModal.close()">X</button>
+        <form action="./php/updateUsuario.php" method="post">
+            <div id="updateDatos"></div>
+            <!-- añadir selecct de categorias y publico mas adelante -->
+            <input type="submit" value="Actualizar">
+            <input type="reset" value="Limpiar">
+        </form>
+    </dialog>
+
+    <!-- SCRIPTs y JQUERYs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="getUsuario.js"></script>
+</body>
+</html>

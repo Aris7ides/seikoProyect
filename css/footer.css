@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f7aefb;
+    color: #494949;
+    text-align: center;
+    /**/
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+
+#footContacto{
+    border: 1px solid;
+}
+
+#footRedes img{
+    width: 60px;
+}
+
+#footEnlaces ul{ 
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+footer a{
+    color: #494949;
+}
+
+@media only screen and (min-width:600px) {
+    footer{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}

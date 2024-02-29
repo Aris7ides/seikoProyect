@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+</head>
+
+<body>
+    <h2>Lista de productos</h2>
+    <button onclick="window.createModal.showModal()">+ Crear Nuevo Producto</button>
+
+    <!-- Ventana modal para crear nuevo  producto -->
+    <dialog id="createModal">
+        <button onclick="window.createModal.close()">X</button>
+        <form action="./php/createProducto.php" method="post">
+            <label for="nomP">Nombre del Producto:</label>
+            <input type="text" name="nomP" id="nomP" autofocus>
+            <br>
+            <label for="descP">Descripcion:</label>
+            <input type="text" name="descP" id="descP">
+            <br>
+            <label for="precioP">Precio:</label>
+            <input type="number" name="precioP" id="precioP">
+            <br>
+            <!-- añadir selecct de categorias y publico mas adelante -->
+            <input type="submit" value="Añadir">
+            <input type="reset" value="Limpiar">
+        </form>
+    </dialog>
+
+    <div id="productosList" style="border: 1px solid gray;"></div>
+
+    <!-- Ventana modal para editar un producto -->
+    <dialog id="updateModal">
+        <button onclick="window.updateModal.close()">X</button>
+        <form action="./php/updateProducto.php" method="post">
+            <div id="updateDatos"></div>
+            <!-- añadir selecct de categorias y publico mas adelante -->
+            <input type="submit" value="Actualizar">
+            <input type="reset" value="Limpiar">
+        </form>
+    </dialog>
+
+    <!-- SCRIPTs y JQUERYs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="getProducto.js"></script>
+</body>
+
+</html>

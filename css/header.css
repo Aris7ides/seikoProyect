@@ -1,0 +1,89 @@
+body{
+    margin: 0;
+}
+
+/*HEADER*/
+
+header {
+    /* display: flex;
+    flex-direction: row;
+    align-items: center; */
+    background-color: #f7aefb;
+    color: #494949;
+    font-family: "Dancing Script", cursive;
+}
+
+#containerHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header p{
+    display: none;
+}
+
+header a{
+    text-decoration: none;
+    color: #494949;
+}
+
+#logo{
+    padding: 2vh;
+}
+
+#logo img{
+    width: 50%;
+}
+
+#menuMobile{
+    padding: 2vh;
+}
+
+#menuMobile img{
+    height: 68px;
+}
+
+nav{
+    display: none;
+}
+
+/**/
+
+
+
+@media only screen and (min-width:600px) {
+    #menuMobile{
+        display: none;
+    }
+
+    header p{
+        display: block;
+    }
+
+    nav{
+        display: block;
+        text-align: center;
+    }
+
+    nav ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: large;
+    }
+    
+    nav li{
+        display: inline;
+        margin: 1vw;
+    }
+
+    #containerHeader{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #logo{
+        text-align: center;
+    }
+}
