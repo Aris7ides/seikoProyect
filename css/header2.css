@@ -20,7 +20,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    height: 90px;
+    height: 10vh;
 }
 
 header p{
@@ -65,7 +65,14 @@ nav ul{
 
 /**/
 
-
+@media only screen and (max-width:599px){
+    nav{
+    position: absolute;
+    height: 90vh;
+    background-color: rosybrown;
+    width: 100%;
+    }
+}
 
 @media only screen and (min-width:600px) {
     #menuMobile{

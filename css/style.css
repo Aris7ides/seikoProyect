@@ -1,17 +1,14 @@
 body{
     margin: 0;
+    color: #494949;
 }
 
 /*HEADER*/
 
 header {
-    /* display: flex;
-    flex-direction: row;
-    align-items: center; */
     background-color: #f7aefb;
-    color: #494949;
     font-family: "Dancing Script", cursive;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
@@ -20,7 +17,8 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    height: 90px;
+    height: 10vh;
+    border-bottom: 2px solid #494949;
 }
 
 header p{
@@ -38,7 +36,7 @@ header a{
 
 #logo img{
     width: 100%;
-    height: 60px;
+    height: 48px;
 }
 
 #menuMobile{
@@ -46,11 +44,12 @@ header a{
 }
 
 #menuMobile img{
-    height: 48px;
+    height: 42px;
 }
 
 nav{
     display: none;
+    border-bottom: 2px solid #494949;
 }
 
 nav ul{
@@ -63,9 +62,65 @@ nav ul{
     align-items: center; */
 }
 
-/**/
+nav li{
+    padding-bottom: 5px;
+}
 
+/*FOOTER*/
 
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f7aefb;
+    text-align: center;
+    /**/
+    width: 100%;
+    /* position: absolute;
+    bottom: 0px; */
+    padding-bottom: 18px;
+    border-top: 2px solid #494949;
+}
+
+#footContacto{
+    border: 1px solid;
+}
+
+#footRedes img{
+    width: 60px;
+}
+
+#footEnlaces ul{ 
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+footer a{
+    color: #494949;
+}
+
+/*MAIN*/
+/*BOTON WHATSAPP*/
+.bttnWhatsapp img{
+    width: 20px;
+    height: 20px;
+}
+
+/*ContainerMain*/
+.containerMain{
+    text-align: center;
+}
+
+@media only screen and (max-width:599px){
+    nav{
+    background-color: #f7aefb;
+    position: absolute;
+    height: 90vh;
+    width: 100%;
+    }
+}
 
 @media only screen and (min-width:600px) {
     #menuMobile{
@@ -84,6 +139,8 @@ nav ul{
 
     nav ul{
         display: block;
+        margin: 0;
+        padding: 0;
     }
     
     nav li{
@@ -99,5 +156,11 @@ nav ul{
 
     #logo{
         text-align: center;
+    }
+
+    /**/
+    footer{
+        flex-direction: row;
+        align-items: flex-start;
     }
 }

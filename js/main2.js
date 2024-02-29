@@ -3,11 +3,13 @@ let nav=document.querySelector("header nav");
 //funcion que se le aplica al menu en version movil, abre y cierra el nav
 function openNav(){
     if(nav.style.display=="none" || nav.style.display==""){
-        document.body.style.overflow="hidden";
         nav.style.display="block";
+        document.body.style.overflow="hidden";
+        console.log(document.body.style.overflow);
     }else{
         nav.style.display="none";
         document.body.style.overflow="auto";
+        console.log(document.body.style.overflow);
     }
 }
 
