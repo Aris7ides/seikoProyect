@@ -10,6 +10,7 @@ header {
     font-family: "Dancing Script", cursive;
     font-size: 1.2em;
     font-weight: bold;
+    /*HACER header fijo*/
 }
 
 #containerHeader {
@@ -113,6 +114,7 @@ footer a{
     text-align: center;
 }
 
+/*movil*/
 @media only screen and (max-width:599px){
     nav{
     background-color: #f7aefb;
@@ -120,8 +122,13 @@ footer a{
     height: 90vh;
     width: 100%;
     }
+
+    aside{
+        display: none;
+    }
 }
 
+/*web*/
 @media only screen and (min-width:600px) {
     #menuMobile{
         display: none;
